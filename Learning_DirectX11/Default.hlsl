@@ -25,7 +25,17 @@ struct VS_OUTPUT
 
 cbuffer TransformData : register(b0)
 {
-    float4 offset;
+    row_major matrix matWorld;
+    row_major matrix matView;
+    row_major matrix matProjection;
+    
+    /*  □ row_major
+         - 이득우저 게임수학은 P V (TRS) v 로 했었는데,
+           현재 공부중인 엔진은 v (SRT) V P 를 사용하고 있다. (기존 수리 행렬의 전치와 같음)
+           전자는 Vec으로 Mat 연산시, Vec이 ColVec 이었는데, 후자는 전치되니, Vec이 RowVec으로 인식해야함. 
+           위 row_major는 그 내용. Matrix 에서 입력, 사용되는 Vec 들을 rowVec 으로 간주하라는 뜻
+    */
+    
 }
 
 
@@ -35,8 +45,13 @@ VS_OUTPUT VS(VS_INPUT input)
 {
     VS_OUTPUT output;
     
-    output.position = input.position + offset;
-    //output.color = input.color;
+    // WVP
+    float4 position = mul(input.position, matWorld); // W
+    position = mul(position, matView); // V
+    position = mul(position, matProjection); // P
+    
+    
+    output.position = position;
     output.uv = input.uv;
     
 
@@ -165,6 +180,7 @@ float4 main( float4 pos : POSITION ) : SV_POSITION
 
 
 #if 0  // Practice
+
 struct VS_INPUT
 {
     float4 position : POSITION;
@@ -174,20 +190,24 @@ struct VS_INPUT
 struct VS_OUTPUT
 {
     float4 position : SV_POSITION;
-    float2 uv : TEXXCORD;
+    float2 uv : TEXCOORD;
 };
+
+cbuffer TransformData : register(b0)
+{
+    float4 offset;
+}
 
 
 VS_OUTPUT VS(VS_INPUT input)
 {
     VS_OUTPUT output;
     
-    output.position = input.position;
+    output.position = input.position + offset;
     output.uv = input.uv;
     
     return output;
 }
-
 
 Texture2D texture0 : register(t0);
 SamplerState sampler0 : register(s0);
@@ -197,17 +217,11 @@ float4 PS(VS_OUTPUT input) : SV_Target
     float4 color = texture0.Sample(sampler0, input.uv);
     
     return color;
-
 }
 
 float4 main(float4 pos : POSITION) : SV_POSITION
 {
     return pos;
 }
-
-
-
-
-
 
 #endif // Practice

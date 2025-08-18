@@ -5,46 +5,106 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="리소스 파일\99.Headers">
+    <Filter Include="소스파일">
+      <UniqueIdentifier>{400518a3-fcbd-4858-b752-d808b4a7c94e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스파일\99.Headers">
       <UniqueIdentifier>{edcda36c-789b-40da-bead-99a50dc50db3}</UniqueIdentifier>
     </Filter>
-    <Filter Include="리소스 파일\01.Main">
-      <UniqueIdentifier>{ae072abd-e622-423b-b3ee-24e394671a4e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="리소스 파일\99.Headers\Andromeda">
+    <Filter Include="소스파일\99.Headers\Andromeda">
       <UniqueIdentifier>{1f5d415b-3045-4ad5-9db6-079bc05074e0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="리소스 파일\98.Shaders">
+    <Filter Include="소스파일\01.Main">
+      <UniqueIdentifier>{ae072abd-e622-423b-b3ee-24e394671a4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스파일\98.Shaders">
       <UniqueIdentifier>{c05b4451-e64d-465e-94ba-f9b5263be4a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스파일\99.Headers\Utils">
+      <UniqueIdentifier>{abb9d8c7-2040-4f85-a35c-2c64df0dd635}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스파일\00.Engine">
+      <UniqueIdentifier>{cd0e9dd2-49f6-43ee-9f9d-5ba9e2e05637}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스파일\00.Engine\PipeLine">
+      <UniqueIdentifier>{fddf0c6c-4fbd-4e09-8914-732a3e67f0d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스파일\00.Engine\PipeLine\00.Gemometry">
+      <UniqueIdentifier>{69d29ef8-17b2-4868-8d8b-638b6087ea42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스파일\00.Engine\PipeLine\01.InputAssembler">
+      <UniqueIdentifier>{278646cb-abd5-44f5-aa07-b1302522b6c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스파일\00.Engine\PipeLine\02.VertexShader">
+      <UniqueIdentifier>{50163b6d-7a48-4586-819f-b50f510d5fe7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스파일\00.Engine\PipeLine\03.Rasterizer">
+      <UniqueIdentifier>{85c801e3-fabf-4cd8-884e-ad3b00ea84b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스파일\00.Engine\PipeLine\04.PixelShader">
+      <UniqueIdentifier>{6d1bfb83-6112-48b9-8d41-e8110f450bf0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스파일\00.Engine\PipeLine\05.OutputMerger">
+      <UniqueIdentifier>{429922d7-9288-45b5-b960-c1f4bafe9114}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
-      <Filter>리소스 파일\99.Headers\Andromeda</Filter>
+      <Filter>소스파일\99.Headers\Andromeda</Filter>
     </ClInclude>
     <ClInclude Include="Learning_DirectX11.h">
-      <Filter>리소스 파일\99.Headers\Andromeda</Filter>
+      <Filter>소스파일\99.Headers\Andromeda</Filter>
     </ClInclude>
     <ClInclude Include="Resource.h">
-      <Filter>리소스 파일\99.Headers\Andromeda</Filter>
+      <Filter>소스파일\99.Headers\Andromeda</Filter>
     </ClInclude>
     <ClInclude Include="targetver.h">
-      <Filter>리소스 파일\99.Headers\Andromeda</Filter>
+      <Filter>소스파일\99.Headers\Andromeda</Filter>
     </ClInclude>
     <ClInclude Include="pch.h">
-      <Filter>리소스 파일\99.Headers</Filter>
+      <Filter>소스파일\99.Headers</Filter>
     </ClInclude>
     <ClInclude Include="Values.h">
-      <Filter>리소스 파일\99.Headers</Filter>
+      <Filter>소스파일\99.Headers</Filter>
     </ClInclude>
     <ClInclude Include="Struct.h">
-      <Filter>리소스 파일\99.Headers</Filter>
+      <Filter>소스파일\99.Headers</Filter>
     </ClInclude>
     <ClInclude Include="Types.h">
-      <Filter>리소스 파일\99.Headers</Filter>
+      <Filter>소스파일\99.Headers</Filter>
     </ClInclude>
     <ClInclude Include="Game.h">
-      <Filter>리소스 파일\01.Main</Filter>
+      <Filter>소스파일\01.Main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\Include\SimpleMath\SimpleMath.h">
+      <Filter>소스파일\99.Headers\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics.h">
+      <Filter>소스파일\00.Engine\PipeLine</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexBuffer.h">
+      <Filter>소스파일\00.Engine\PipeLine\01.InputAssembler</Filter>
+    </ClInclude>
+    <ClInclude Include="IndexBuffer.h">
+      <Filter>소스파일\00.Engine\PipeLine\01.InputAssembler</Filter>
+    </ClInclude>
+    <ClInclude Include="InputLayout.h">
+      <Filter>소스파일\00.Engine\PipeLine\01.InputAssembler</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry.h">
+      <Filter>소스파일\00.Engine\PipeLine\00.Gemometry</Filter>
+    </ClInclude>
+    <ClInclude Include="GeometryHelper.h">
+      <Filter>소스파일\00.Engine\PipeLine\00.Gemometry</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexData.h">
+      <Filter>소스파일\00.Engine\PipeLine\00.Gemometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>소스파일\00.Engine\PipeLine\02.VertexShader</Filter>
+    </ClInclude>
+    <ClInclude Include="ConstantBuffer.h">
+      <Filter>소스파일\00.Engine\PipeLine\02.VertexShader</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -62,18 +122,53 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Learning_DirectX11.cpp">
-      <Filter>리소스 파일\01.Main</Filter>
+      <Filter>소스파일\01.Main</Filter>
     </ClCompile>
     <ClCompile Include="pch.cpp">
-      <Filter>리소스 파일\99.Headers</Filter>
+      <Filter>소스파일\99.Headers</Filter>
     </ClCompile>
     <ClCompile Include="Game.cpp">
-      <Filter>리소스 파일\01.Main</Filter>
+      <Filter>소스파일\01.Main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\Include\SimpleMath\SimpleMath.cpp">
+      <Filter>소스파일\99.Headers\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics.cpp">
+      <Filter>소스파일\00.Engine\PipeLine</Filter>
+    </ClCompile>
+    <ClCompile Include="VertexBuffer.cpp">
+      <Filter>소스파일\00.Engine\PipeLine\01.InputAssembler</Filter>
+    </ClCompile>
+    <ClCompile Include="IndexBuffer.cpp">
+      <Filter>소스파일\00.Engine\PipeLine\01.InputAssembler</Filter>
+    </ClCompile>
+    <ClCompile Include="InputLayout.cpp">
+      <Filter>소스파일\00.Engine\PipeLine\01.InputAssembler</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry.cpp">
+      <Filter>소스파일\00.Engine\PipeLine\00.Gemometry</Filter>
+    </ClCompile>
+    <ClCompile Include="GeometryHelper.cpp">
+      <Filter>소스파일\00.Engine\PipeLine\00.Gemometry</Filter>
+    </ClCompile>
+    <ClCompile Include="VertexData.cpp">
+      <Filter>소스파일\00.Engine\PipeLine\00.Gemometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>소스파일\00.Engine\PipeLine\02.VertexShader</Filter>
+    </ClCompile>
+    <ClCompile Include="ConstantBuffer.cpp">
+      <Filter>소스파일\00.Engine\PipeLine\02.VertexShader</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="Default.hlsl">
-      <Filter>리소스 파일\98.Shaders</Filter>
+      <Filter>소스파일\98.Shaders</Filter>
     </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Libraries\Include\SimpleMath\SimpleMath.inl">
+      <Filter>소스파일\99.Headers\Utils</Filter>
+    </None>
   </ItemGroup>
 </Project>
