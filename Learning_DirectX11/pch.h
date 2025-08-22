@@ -12,6 +12,7 @@
 using namespace std;	
 #include <string>
 #include <memory>
+#include <array>
 
 // Win
 #include <Windows.h>
@@ -51,6 +52,12 @@ using namespace Microsoft::WRL;
 
 #define CHECK(p) assert(SUCCEEDED(p)) 
 
+#define GAME GGame
+#define SCENE GGame->GetSceneManager()
+#define INPUT GGame->GetInputManager()
+#define TIME GGame->GetTimeManager()
+#define RESOURCES GGame->GetResourceManager()
+
 // Engine
 #include "Graphics.h"
 #include "VertexBuffer.h"
@@ -59,5 +66,11 @@ using namespace Microsoft::WRL;
 #include "VertexData.h"
 #include "Geometry.h"
 #include "GeometryHelper.h"
-#include "Shader.h"
+#include "ShaderBase.h"
 #include "ConstantBuffer.h"
+#include "Texture.h"
+#include "RasterizerState.h"
+#include "SamplerState.h"
+#include "BlendState.h"
+#include "Pipeline.h"
+#include "Transform.h"

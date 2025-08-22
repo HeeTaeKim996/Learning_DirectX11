@@ -600,7 +600,7 @@ namespace DirectX
         Matrix operator/ (const Matrix& M1, const Matrix& M2) noexcept;
             // Element-wise divide
         Matrix operator* (float S, const Matrix& M) noexcept;
-
+        
 
         //-----------------------------------------------------------------------------
         // Plane

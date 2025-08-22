@@ -23,18 +23,21 @@ struct VS_OUTPUT
 
 
 
-cbuffer TransformData : register(b0)
+cbuffer CameraData : register(b0)
 {
-    row_major matrix matWorld;
     row_major matrix matView;
     row_major matrix matProjection;
-    
     /*  □ row_major
          - 이득우저 게임수학은 P V (TRS) v 로 했었는데,
            현재 공부중인 엔진은 v (SRT) V P 를 사용하고 있다. (기존 수리 행렬의 전치와 같음)
            전자는 Vec으로 Mat 연산시, Vec이 ColVec 이었는데, 후자는 전치되니, Vec이 RowVec으로 인식해야함. 
            위 row_major는 그 내용. Matrix 에서 입력, 사용되는 Vec 들을 rowVec 으로 간주하라는 뜻
     */
+}
+
+cbuffer TransformData : register(b1)
+{
+    row_major matrix matWorld;
     
 }
 

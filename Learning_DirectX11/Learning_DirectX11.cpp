@@ -1,4 +1,5 @@
-﻿#include "pch.h"
+﻿#pragma once
+#include "pch.h"
 #include "framework.h"
 #include "Learning_DirectX11.h"
 #include "Game.h"
@@ -25,8 +26,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance
 		return false;
 	}
 
-	Game game;
-	game.Init(hWnd);
+	GGame->Init(hWnd);
 
 	MSG msg = {};
 
@@ -40,8 +40,8 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance
 		}
 		else
 		{
-			game.Update();
-			game.Render();
+			GGame->Update();
+			GGame->Render();
 		}
 	}
 
